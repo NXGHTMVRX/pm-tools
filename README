@@ -6,3 +6,15 @@ Waiter waits for any pid, not just your children, with 0 overhead.
 Usage:
 
 $ waiter 1234
+
+
+
+
+Nosudo
+------
+
+Nosudo runs a program and prevents it from gaining new privileges.
+
+Usage:
+
+$ nosudo /bin/sudo whoami
