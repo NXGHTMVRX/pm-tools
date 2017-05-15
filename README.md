@@ -54,3 +54,9 @@ Usage:
 Notes:
 - Requires linux >= 3.4
 - Works by calling `prctl(PR_SET_CHILD_SUBREAPER, 1, ...)`
+
+
+Subreaper
+----------
+
+Similar to nochildren, just waits for all the children.
