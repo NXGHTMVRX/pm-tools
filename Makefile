@@ -1,6 +1,6 @@
 CFLAGS= -O2 -Wall -Wextra -std=c99
 
-all: waiter nosudo nochildren subreaper
+all: waiter nosudo nochildren subreaper ptracer
 	
 waiter: waiter.c
 	uname -rs | awk -F'[ .]' '$$1 != "Linux" || $$2 < 3 || ($$2 == 3 && $$3 < 4) { exit 1 }'
@@ -15,3 +15,6 @@ nochildren: nochildren.c
 
 subreaper: subreaper.c
 	$(CC) $(CFLAGS) $(LDFLAGS) subreaper.c -o subreaper
+
+ptracer: ptracer.c
+	$(CC) $(CFLAGS) $(LDFLAGS) ptracer.c -o ptracer

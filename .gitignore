@@ -2,3 +2,4 @@ waiter
 nosudo
 nochildren
 subreaper
+ptracer

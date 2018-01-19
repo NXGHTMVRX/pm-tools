@@ -60,3 +60,19 @@ Subreaper
 ----------
 
 Similar to nochildren, just waits for all the children.
+
+
+
+Ptracer
+-------
+
+Ptracer runs a program and lets you specify a pid that will then be able to ptrace it.
+
+Usage:
+
+    $ ptracer 1234 sleep 1h
+
+Notes:
+- Requires linux >= 3.4
+- Works by calling `prctl(PR_SET_PTRACER, pid, ...)`
+- Using -1 as the pid makes it ptraceable by anyone
